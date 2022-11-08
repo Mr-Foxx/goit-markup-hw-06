@@ -25,6 +25,52 @@ img {
   height: auto;
 }
 
+textarea {
+  resize: none;
+}
+.group {
+  margin-bottom: 20px;
+}
+.group-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+
+.form {
+  padding: 0;
+  margin: 0;
+  width: 600px;
+  border: solid 1px tomato;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-field {
+  margin-bottom: 10px;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.form-field input {
+  padding: 10px 20px;
+  margin: 0px;
+  border-radius: 3px;
+  border: 1px solid #2f303a;
+}
+.form-field label {
+  margin-bottom: 0px;
+}
+label .polici-blue {
+  color: var(--accent-color);
+}
+.date {
+}
+.comment {
+  padding: 8px;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
