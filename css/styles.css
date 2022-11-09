@@ -870,3 +870,65 @@ label .polici-blue {
   height: 20px;
   fill: #ffffff;
 }
+
+.footer-form {
+  margin-left: 103px;
+}
+.footer-form-title {
+  width: 207px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.footer-form-about {
+  display: flex;
+}
+.footer-form-list {
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-label {
+}
+.footer-input {
+  padding: 0;
+  margin: 15px;
+  background-color: #2f303a;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+}
+.aaa {
+}
+.footer-form-button {
+  padding-top: 10px;
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: currentColor;
+
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+
+  color: #ffffff;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.footer-icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
