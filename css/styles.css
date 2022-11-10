@@ -43,7 +43,7 @@ textarea {
   padding: 0;
   margin: 0;
   width: 528px;
-  border: solid 1px tomato;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,6 +71,7 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 10px 20px;
+  padding-left: 42px;
   margin: 0px;
 }
 .form-field input:hover {
@@ -83,10 +84,12 @@ textarea {
 label .polici-blue {
   color: var(--accent-color);
 }
+
 .form-field input:focus {
   border: 3px solid var(--accent-color);
 }
 .form-field textarea:focus {
+  background-origin: border-box;
   border: 3px solid var(--accent-color);
 }
 .form-field:focus-within {
@@ -97,6 +100,43 @@ label .polici-blue {
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+.checkbox:checked {
+}
+.form-icon {
+  width: 16px;
+  height: 15px;
+  border: solid 2px #212121;
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 4px;
+  left: 49px;
+}
+.checkbox:checked + .form-icon {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  border-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+}
+.polisi-title {
+}
+.checkbox {
+  /* -webkit-appearance: none;
+  position: absolute; */
+  top: 5px;
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .form-field-button {
   width: 200px;
@@ -119,23 +159,11 @@ label .polici-blue {
 }
 .form-svg {
 }
-.form-svg-men {
+.form-svg {
   margin: 14px;
   position: absolute;
-  width: 12px;
-  height: 12px;
-}
-.form-svg-tel {
-  margin: 14px;
-  position: absolute;
-  width: 13px;
-  height: 13px;
-}
-.form-svg-mail {
-  margin: 14px;
-  position: absolute;
-  width: 15px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
 }
 
 .container {
