@@ -68,6 +68,7 @@ textarea {
   margin-right: auto;
 }
 .form-field input {
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 10px 20px;
@@ -86,15 +87,17 @@ label .polici-blue {
 }
 
 .form-field input:focus {
-  border: 3px solid var(--accent-color);
+  transition: border 250ms var(--cubic);
+
+  border: 1px solid var(--accent-color);
 }
 .form-field textarea:focus {
+  outline: none;
   background-origin: border-box;
-  border: 3px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transition: border 250ms var(--cubic);
 }
-.form-field:focus-within {
-  fill: var(--accent-color);
-}
+
 .comment {
   padding: 12px 16px;
   height: 120px;
@@ -103,20 +106,39 @@ label .polici-blue {
 }
 .checkbox:checked {
 }
-.form-icon {
+/* .form-icon {
   width: 16px;
   height: 15px;
+
+  display: inline-block;
+  position: absolute;
+  margin-top: 4px;
+  left: 49px;
+} */
+.checkbox:checked + .form-icon {
+}
+.form-icon-svg {
   border: solid 2px #212121;
   border-radius: 2px;
   display: inline-block;
   position: absolute;
   margin-top: 4px;
   left: 49px;
+  width: 16px;
+  height: 15px;
+  fill: #ffffff;
+  transition: background-color 250ms var(--cubic), border 250ms var(--cubic);
 }
-.checkbox:checked + .form-icon {
+.form-field:focus-within {
+  transition: fill 10ms var(--cubic);
+  fill: var(--accent-color);
+}
+.checkbox:checked + .form-icon-svg {
+  outline: none;
+  border-radius: 4px;
   background-color: var(--accent-color);
-  background-image: url(../images/icon-check.svg);
-  border-color: var(--accent-color);
+  fill: #ffffff;
+  border: solid 1px var(--accent-color);
   background-size: contain;
   background-origin: border-box;
 }
@@ -157,13 +179,22 @@ label .polici-blue {
 
   transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
+.form-field-button:hover {
+  background-color: #188ce8;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+}
 .form-svg {
 }
 .form-svg {
-  margin: 14px;
+  margin-left: 14px;
+  margin-top: 10px;
+
   position: absolute;
   width: 18px;
   height: 18px;
+
+  transition: fill 250ms var(--cubic);
 }
 
 .container {
@@ -984,14 +1015,22 @@ label .polici-blue {
 .footer-label {
 }
 .footer-input {
-  padding: 0;
-  margin: 15px;
+  padding: 15px 16px;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+
   background-color: #2f303a;
   color: rgba(255, 255, 255, 0.6);
   border: none;
+  transition: border 250ms var(--cubic);
 }
-.aaa {
+.footer-input:focus {
+  outline: none;
+  border-radius: 4px;
+  border: solid 1px var(--accent-color);
 }
+
 .footer-form-button {
   padding-top: 10px;
   margin-left: 12px;
